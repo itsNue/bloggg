@@ -1,0 +1,145 @@
+---
+import astroLogo from '../assets/astro.svg';
+import background from '../assets/background.svg';
+import { Font } from 'astro:assets';
+---
+<head>
+	<Font cssVariable="--font-mono" />
+</head>
+<div id="container">
+	<main>
+		<section id="hero">
+			<h1>Archive</h1>
+		</section>
+		<section id="posts">
+			<section id="post">
+				<div class="thumbnail-container">
+					<section id="thumbnail-bg"></section>
+					<section id="thumbnail">
+					</section>
+				</div>
+				<section id="details">
+					<section id="title">Figma</section>
+					<section id="description">
+						where ar a time nor a place in which we have to complex why is there no any other person with a vision where ar a time nor a place in which we have to complex why is there no any other person with a vision
+					</section>
+				</section>
+			</section>
+			<section id="post">
+				<div class="thumbnail-container">
+					<section id="thumbnail-bg"></section>
+					<section id="thumbnail">
+					</section>
+				</div>
+				<section id="details">
+					<section id="title">Figma</section>
+					<section id="description">
+						where ar a time nor a place in which we have to complex why is there no any other person with a vision where ar a time nor a place in which we have to complex why is there no any other person with a vision
+					</section>
+				</section>
+			</section>
+		</section>
+	</main>
+</div>
+
+<style>
+	body {
+		display: flex;
+		justify-content: center;
+		font-family: var(--font-mono);
+		font-weight: 500;
+		background: #FBFBEF;
+	}
+	
+	#container {
+		width: 800px;
+		height: 100%;
+		color: #775E30;
+		display: flex;
+		justify-content: center;
+	}
+
+	main {
+		height: 100%;
+		width: 100%;
+	}
+
+	#hero {
+		display: flex;
+		align-items: start;
+		flex-direction: column;
+		padding: 16px;
+		border-bottom: #EBEBD9 1px solid;
+		width: 100%;
+	}
+
+	h1 {
+		font-size: 1rem;
+		margin-top: 0.25em;
+		font-weight: 400;
+	}
+
+	#posts {
+		margin-top: 12pt;
+	}
+
+	#post {
+		display: flex;
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+	.thumbnail-container {
+  		position: relative;
+  		display: inline-block; /* Adjust to block/flex based on your layout */
+	}
+	#thumbnail-bg {
+  	position: absolute;
+  	top: 0px;  /* Adjust the offset if you want it to peek out from behind */
+  	left: 0px;
+  	width: 90px;
+  	height: 90px;
+  	background-color: #4F8242;
+  	border: 2px solid #fff;
+  	border-radius: 0.5rem;
+	box-shadow: 
+  					1px 2px 4px 0px rgba(0, 0, 0, 0.10),
+  					/* 5px 6px 8px 0px rgba(0, 0, 0, 0.09), */
+  					/* 10px 14px 10px 0px rgba(0, 0, 0, 0.05), */
+  					18px 24px 12px 0px rgba(0, 0, 0, 0.01);
+	}
+	#thumbnail {
+		position: relative; /* Ensures it stays on top of .thumbnail-bg by default order */
+  		display: block;
+  		width: 90px;
+  		max-width: 90px;
+  		height: 90px;
+  		background-color: #4F8242;
+  		border: 2px solid #fff;
+  		border-radius: 0.5rem;
+  		flex-shrink: 0;
+  		transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+		box-shadow: 
+  					1px 2px 4px 0px rgba(0, 0, 0, 0.10),
+  					5px 6px 8px 0px rgba(0, 0, 0, 0.09),
+  					10px 14px 10px 0px rgba(0, 0, 0, 0.05),
+  					18px 24px 12px 0px rgba(0, 0, 0, 0.01);
+	}
+	#thumbnail:hover {
+		transform: rotate(-9deg);
+	}
+
+
+	#details {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	#details #title {
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+
+	#details #description {
+		font-size: 11px;
+	}
+</style>
